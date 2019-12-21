@@ -1,4 +1,4 @@
-package uz.v12.orderapp.db.entities.repos;
+package uz.v12.orderapp.db.repos;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import uz.v12.orderapp.db.entities.Market;

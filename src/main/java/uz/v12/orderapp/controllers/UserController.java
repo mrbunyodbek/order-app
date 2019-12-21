@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import uz.v12.orderapp.db.entities.User;
-import uz.v12.orderapp.db.entities.dao.interfaces.UserDAO;
+import uz.v12.orderapp.db.dao.interfaces.UserDAO;
 
 
 import java.util.List;

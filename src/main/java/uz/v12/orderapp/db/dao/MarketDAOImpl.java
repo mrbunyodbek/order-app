@@ -1,10 +1,10 @@
-package uz.v12.orderapp.db.entities.dao;
+package uz.v12.orderapp.db.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uz.v12.orderapp.db.entities.Market;
-import uz.v12.orderapp.db.entities.dao.interfaces.MarketDAO;
-import uz.v12.orderapp.db.entities.repos.MarketRepository;
+import uz.v12.orderapp.db.dao.interfaces.MarketDAO;
+import uz.v12.orderapp.db.repos.MarketRepository;
 
 import java.util.List;
 
@@ -21,14 +21,18 @@ public class MarketDAOImpl implements MarketDAO {
 
     @Override
     public List<Market> getAll() {
-        List<Market> marketList = repository.findAll();
-        return marketList;
+        return repository.findAll();
     }
 
 
     @Override
     public Market getByName(String name) {
         return repository.findByName(name);
+    }
+
+    @Override
+    public Market getById(int id) {
+        return repository.findById(id);
     }
 
     @Override

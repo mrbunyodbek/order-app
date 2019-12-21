@@ -1,15 +1,15 @@
-package uz.v12.orderapp.db.entities.dao.interfaces;
+package uz.v12.orderapp.db.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import uz.v12.orderapp.db.dao.interfaces.UserDAO;
 import uz.v12.orderapp.db.entities.User;
-import uz.v12.orderapp.db.entities.repos.UserRepository;
+import uz.v12.orderapp.db.repos.UserRepository;
 
-import javax.jws.soap.SOAPBinding;
 import java.util.List;
 
 @Service
-public abstract class UserDAOImpl implements UserDAO {
+public class UserDAOImpl implements UserDAO {
     private UserRepository repository;
 
     @Autowired
@@ -20,8 +20,7 @@ public abstract class UserDAOImpl implements UserDAO {
 
     @Override
     public List<User> getAll() {
-        List<User> userList = repository.findAll();
-        return userList;
+        return repository.findAll();
     }
 
     @Override

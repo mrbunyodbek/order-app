@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import uz.v12.orderapp.db.entities.Market;
-import uz.v12.orderapp.db.entities.dao.interfaces.MarketDAO;
+import uz.v12.orderapp.db.dao.interfaces.MarketDAO;
 
 import java.util.List;
 

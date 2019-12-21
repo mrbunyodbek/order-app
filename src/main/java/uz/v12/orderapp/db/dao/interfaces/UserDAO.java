@@ -1,4 +1,4 @@
-package uz.v12.orderapp.db.entities.dao.interfaces;
+package uz.v12.orderapp.db.dao.interfaces;
 
 import uz.v12.orderapp.db.entities.User;
 
@@ -19,8 +19,6 @@ public interface UserDAO {
     void saveUser(User user);
 
     void editUser(User user);
-
-    void editUser(User user, Integer id);
 
     void deleteById(Integer id);
 }
