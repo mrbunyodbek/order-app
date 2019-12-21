@@ -27,4 +27,8 @@ public class User {
 
     @Column(nullable = false)
     private String lastName;
+
+    @Column(name = "market_id")
+    private int marketId;
+
 }
