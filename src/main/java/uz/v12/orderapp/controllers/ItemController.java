@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/item")
+@RequestMapping("/items")
 public class ItemController {
     private ItemDAO dao;
 
