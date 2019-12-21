@@ -31,4 +31,6 @@ public class User {
     @Column(name = "market_id")
     private int marketId;
 
+    @Column(name = "role")
+    private String role;
 }
