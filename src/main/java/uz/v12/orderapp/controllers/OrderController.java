@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
+import uz.v12.orderapp.collections.FullOrder;
 import uz.v12.orderapp.db.dao.interfaces.ItemDAO;
 import uz.v12.orderapp.db.dao.interfaces.OrderDAO;
 import uz.v12.orderapp.db.entities.Order;
@@ -46,7 +47,7 @@ public class OrderController {
     }
 
     @PostMapping(value = "/save")
-    public ResponseEntity<List<Order>> saveEmployee(@Valid @RequestBody Order order) {
+    public ResponseEntity<List<Order>> saveEmployee(@Valid @RequestBody FullOrder order) {
         dao.saveOrder(order);
         return new ResponseEntity<>(dao.getAll(), HttpStatus.OK);
     }
