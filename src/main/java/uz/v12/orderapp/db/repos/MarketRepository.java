@@ -6,7 +6,7 @@ import uz.v12.orderapp.db.entities.Market;
 import java.util.List;
 
 public interface MarketRepository extends JpaRepository<Market, Integer> {
-    List<Market> findAllById();
+
 
     Market findById(int id);
 

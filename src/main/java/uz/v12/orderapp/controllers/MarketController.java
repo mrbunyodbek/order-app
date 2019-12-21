@@ -44,7 +44,7 @@ public class MarketController {
         return new ResponseEntity<>(marketDAO.getAll(), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping(value = "/update")
     public ResponseEntity<List<Market>> updateUser(@RequestBody Market market) {
         marketDAO.editMarket(market);
         return new ResponseEntity<>(marketDAO.getAll(), HttpStatus.OK);
