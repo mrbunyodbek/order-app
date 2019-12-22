@@ -10,7 +10,7 @@ import org.springframework.lang.Nullable;
 import javax.persistence.*;
 
 @Entity
-@Table(name="products")
+@Table(name = "products")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -22,19 +22,19 @@ public class Product {
     private int id;
 
 
-    @Column(name="name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name="rate")
+    @Column(name = "rate")
     private double rate;
 
-    @Column(name="count")
+    @Column(name = "count")
     private int count;
 
-    @Column(name="order_count")
+    @Column(name = "order_count")
     private int orderCount;
 
-    @Column(name="image",columnDefinition = "text")
+    @Column(name = "image", columnDefinition = "text")
     private String image;
 
 }

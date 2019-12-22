@@ -41,7 +41,7 @@ public class ProductDAOImpl implements ProductDAO {
     public void editProduct(Product product) {
 
         Product temp=repository.findById(product.getId());
-        temp.setCout(product.getCout());
+        temp.setCount(product.getCount());
         temp.setName(product.getName());
         temp.setRate(product.getRate());
         repository.save(temp);
