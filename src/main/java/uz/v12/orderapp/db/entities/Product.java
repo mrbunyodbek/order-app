@@ -29,10 +29,10 @@ public class Product {
     private double rate;
 
     @Column(name="count")
-    private int cout;
+    private int count;
 
     @Column(name="order_count")
-    private int orderCout;
+    private int orderCount;
 
     @Column(name="image",columnDefinition = "text")
     private String image;
