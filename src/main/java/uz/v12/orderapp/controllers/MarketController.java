@@ -10,7 +10,7 @@ import uz.v12.orderapp.db.entities.Market;
 import uz.v12.orderapp.db.dao.interfaces.MarketDAO;
 
 import java.util.List;
-
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/markets")
 @Service

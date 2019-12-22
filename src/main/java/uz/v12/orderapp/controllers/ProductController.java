@@ -11,7 +11,9 @@ import uz.v12.orderapp.db.entities.Product;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin("http://localhost:3000")
 @RestController
+
 @RequestMapping("/products")
 @Service
 public class ProductController {
@@ -19,27 +21,31 @@ public class ProductController {
     private ProductDAO dao;
 
     @Autowired
-    public ProductController(ProductDAO productDAO){
-        this.dao=productDAO;
+    public ProductController(ProductDAO productDAO) {
+        this.dao = productDAO;
     }
-    @GetMapping(value="/get")
-    public ResponseEntity<List<Product>> getAllProducts(){
+
+    @GetMapping(value = "/get")
+    public ResponseEntity<List<Product>> getAllProducts() {
         return new ResponseEntity<>(dao.getAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value="/get/{id}")
-    public ResponseEntity<Product> getProduct(@PathVariable int id){
+    @GetMapping(value = "/get/{id}")
+    public ResponseEntity<Product> getProduct(@PathVariable int id) {
         return new ResponseEntity<>(dao.getByProductId(id), HttpStatus.OK);
     }
-    @GetMapping(value="/getName")
-    public ResponseEntity<Product> getName(@PathVariable String name){
+
+    @GetMapping(value = "/getName")
+    public ResponseEntity<Product> getName(@PathVariable String name) {
         return new ResponseEntity<>(dao.getByName(name), HttpStatus.OK);
     }
+
     @PostMapping(value = "/save")
     public ResponseEntity<List<Product>> saveEmployee(@Valid @RequestBody Product product) {
         dao.saveProduct(product);
         return new ResponseEntity<>(dao.getAll(), HttpStatus.OK);
     }
+
     @GetMapping(value = "/delete/{id}")
     public ResponseEntity<List<Product>> deleteEmployee(@PathVariable int id) {
         dao.deleteProduct(id);

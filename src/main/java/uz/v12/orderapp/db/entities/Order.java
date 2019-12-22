@@ -31,10 +31,10 @@ public class Order {
     private int marketId;
 
 
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID",strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "rerference",nullable = false)
-    private  UUID reference ;
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "reference",nullable = false)
+    private  int reference ;
 
 
     @Column(name = "date")

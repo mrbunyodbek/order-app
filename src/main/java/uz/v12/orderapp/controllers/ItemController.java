@@ -10,7 +10,7 @@ import uz.v12.orderapp.db.entities.Order;
 
 import javax.validation.Valid;
 import java.util.List;
-
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/items")
 public class ItemController {

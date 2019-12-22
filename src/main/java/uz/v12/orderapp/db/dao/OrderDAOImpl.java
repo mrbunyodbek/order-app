@@ -45,7 +45,7 @@ public class OrderDAOImpl implements OrderDAO {
     @Override
     public void saveOrder(FullOrder fullOrder) {
         repository.save(fullOrder.getOrder());
-        int id = repository.findByReference(fullOrder.getOrder().getReference()).getId();
+        int id = repository.findById(fullOrder.getOrder().getReference()).getId();
 
         List<Item> items = fullOrder.getItems();
         for (Item item : items) {

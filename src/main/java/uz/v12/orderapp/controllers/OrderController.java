@@ -12,7 +12,7 @@ import uz.v12.orderapp.db.entities.Order;
 import javax.validation.Valid;
 import java.time.LocalDate;
 import java.util.List;
-
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/orders")
 @Service

@@ -10,7 +10,7 @@ import uz.v12.orderapp.db.dao.interfaces.UserDAO;
 
 
 import java.util.List;
-
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/users")
 @Service
